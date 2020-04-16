@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="Head.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <title>Home</title>
+    <style>
+        .menu{
+            background: transparent !important;
+        }
+
+    </style>
+
+<body>
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="QuemSomos.html">Quem Somos</a></li>
+            <li><a href="#">Dietas</a>
+                <ul class="submenu">
+                    <li><a href="emagrecer_com_saude.html">Cardápios para emagrecer</a>
+                    <li><a href="dieta_flexivel.html">Dieta flexível(IIFYM)</a>
+                    <li><a href="Dieta_Low_Carb.html">Dieta Low Carb</a>
+                </ul>
+            </li>
+            <li><a href="#">Exercicios</a>
+                <ul class="submenu">
+                    <li><a href="treinoP.html">Treino para pernas</a>
+                    <li><a href="treinoHT.html">Treino para ombros</a>
+                    <li><a href="treinoBTA.html">Treino para Bíceps e Tríceps</a>
+                    <li><a href="treinoPC.html">Treino para Peito e Costas</a>
+                </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <div class="slogan">
+            <h1>Nós da JJSaúde vamos cuidar de você,<br>para você</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="box" style="float: left;">
+                <h3>IMC</h3>
+                <label for="peso">Peso:</label><br>
+                <input id="peso" type="number"><br>
+                <label for="altura">Altura:</label><br>
+                <input id="altura" type="number"><br>
+                
+                <center>
+                    <button onclick="calcularImc()">Ver resultado</button>
+                </center>
+            </div>
+            <div style="float: right;">
+                <img src="./assets/img/mulher-pensando.png" style="width: 80%;">
+            </div>
+            <div id="resposta">
+            </div>
+        </div>
+
+        <div class="row duas-colunas">
+            <div class="box" style="float: left;">
+                <h2>Nossos serviços</h2>
+                <ul>
+                    <li>
+                        <img src="./assets/icon/service-2.png" style="width: 40px;height:auto">
+                        DIETAS
+                    </li>
+                    <li>
+                        <img src="./assets/icon/service-1.png" style="width: 40px;height:auto">
+                        CONSULTORIAS
+                    </li>
+                    <li>
+                        <img src="./assets/icon/service-3.png" style="width: 40px;height:auto">
+                        PERSONAL TRAINER
+                    </li>
+                </ul>
+            </div>
+            <div style="float: right;">
+                <img src="./assets/img/personal.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Contato<br>
+        <hr>
+        fone: 33 8888-9999<br>
+        @saudejj<br>
+        Rua dos Boldos, n° 0
+    </footer>
+</body>
+
+</html>
+<script>
+
+    function calcularImc() {
+        var peso    = document.getElementById('peso').value
+        var altura  = document.getElementById('altura').value
+        var calculo = peso/(altura*altura)
+        
+        var res
+        if(calculo < 18.5) {
+            res = 'Desnutrição'
+        }else if(calculo < 30) {
+            res = 'Normal'
+        }else{
+            res = 'Obesidade'
+        }
+
+        document.getElementById("resposta").innerHTML = 'Seu IMC indica que seu índice de massa corporal é: '+res
+    }
+
+
+</script>

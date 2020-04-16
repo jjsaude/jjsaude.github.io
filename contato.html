@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="Head.css">
-    <title>Head</title>
+    <link rel="stylesheet" href="./assets/css/contato.css">
+    <title>Home</title>
     <style>
-        .banner {
-            position: absolute;
+        .menu{
+            background: transparent !important;
         }
 
     </style>
@@ -39,6 +40,18 @@
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
-</body>
-
-</html>
+    <div class="container">  
+        <center>
+            <h1>Contato</h1>
+            <form action="#" class="form-contact" method="post" tabindex="1">  
+            <input type="text" class="form-contact-input" name="nome" placeholder="Nome" required />  <br><br>
+            <input type="email" class="form-contact-input" name="email" placeholder="Email" required />  <br><br>
+            <input type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />  <br><br>
+            <textarea class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" required></textarea>  <br><br>
+            <button type="submit" class="form-contact-button">Enviar</button>  
+            </form> 
+        </center> 
+        <br>
+        Agradecemos seu interesse, contataremos você em breve
+      </div>  
+    </html> 
